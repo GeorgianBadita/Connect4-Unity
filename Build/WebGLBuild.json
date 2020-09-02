@@ -1,7 +1,7 @@
 {
-"companyName": "DefaultCompany",
+"companyName": "Geo Badita",
 "productName": "Connect4",
-"productVersion": "0.1",
+"productVersion": "0.2",
 "dataUrl": "WebGLBuild.data.unityweb",
 "wasmCodeUrl": "WebGLBuild.wasm.code.unityweb",
 "wasmFrameworkUrl": "WebGLBuild.wasm.framework.unityweb",
