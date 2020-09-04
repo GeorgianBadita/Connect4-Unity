@@ -14171,13 +14171,13 @@ function nullFunc_diii(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
-function nullFunc_diiii(x) {
- err("Invalid function pointer called with signature 'diiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+function nullFunc_diiiddiii(x) {
+ err("Invalid function pointer called with signature 'diiiddiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
-function nullFunc_diiiiii(x) {
- err("Invalid function pointer called with signature 'diiiiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+function nullFunc_diiii(x) {
+ err("Invalid function pointer called with signature 'diiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
@@ -15403,20 +15403,20 @@ function invoke_diii(index, a1, a2, a3) {
   Module["setThrew"](1, 0);
  }
 }
-function invoke_diiii(index, a1, a2, a3, a4) {
+function invoke_diiiddiii(index, a1, a2, a3, a4, a5, a6, a7, a8) {
  var sp = stackSave();
  try {
-  return Module["dynCall_diiii"](index, a1, a2, a3, a4);
+  return Module["dynCall_diiiddiii"](index, a1, a2, a3, a4, a5, a6, a7, a8);
  } catch (e) {
   stackRestore(sp);
   if (typeof e !== "number" && e !== "longjmp") throw e;
   Module["setThrew"](1, 0);
  }
 }
-function invoke_diiiiii(index, a1, a2, a3, a4, a5, a6) {
+function invoke_diiii(index, a1, a2, a3, a4) {
  var sp = stackSave();
  try {
-  return Module["dynCall_diiiiii"](index, a1, a2, a3, a4, a5, a6);
+  return Module["dynCall_diiii"](index, a1, a2, a3, a4);
  } catch (e) {
   stackRestore(sp);
   if (typeof e !== "number" && e !== "longjmp") throw e;
@@ -17700,8 +17700,8 @@ Module.asmLibraryArg = {
  "nullFunc_didi": nullFunc_didi,
  "nullFunc_dii": nullFunc_dii,
  "nullFunc_diii": nullFunc_diii,
+ "nullFunc_diiiddiii": nullFunc_diiiddiii,
  "nullFunc_diiii": nullFunc_diiii,
- "nullFunc_diiiiii": nullFunc_diiiiii,
  "nullFunc_dji": nullFunc_dji,
  "nullFunc_f": nullFunc_f,
  "nullFunc_fdi": nullFunc_fdi,
@@ -17937,8 +17937,8 @@ Module.asmLibraryArg = {
  "invoke_didi": invoke_didi,
  "invoke_dii": invoke_dii,
  "invoke_diii": invoke_diii,
+ "invoke_diiiddiii": invoke_diiiddiii,
  "invoke_diiii": invoke_diiii,
- "invoke_diiiiii": invoke_diiiiii,
  "invoke_dji": invoke_dji,
  "invoke_f": invoke_f,
  "invoke_fdi": invoke_fdi,
@@ -24259,15 +24259,15 @@ var dynCall_diii = Module["dynCall_diii"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_diii"].apply(null, arguments);
 });
+var dynCall_diiiddiii = Module["dynCall_diiiddiii"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_diiiddiii"].apply(null, arguments);
+});
 var dynCall_diiii = Module["dynCall_diiii"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_diiii"].apply(null, arguments);
-});
-var dynCall_diiiiii = Module["dynCall_diiiiii"] = (function() {
- assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
- assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
- return Module["asm"]["dynCall_diiiiii"].apply(null, arguments);
 });
 var dynCall_dji = Module["dynCall_dji"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
